@@ -10,15 +10,15 @@
 
  function result(primerNumero, segundoNumero, operation) {
      if (!primerNumero || !segundoNumero) {
-         return "ERROR";
+         return "¡ERROR!";
      } else {
-         if (operation == "+") {
+         if (operation == "suma") {
              return primerNumero + segundoNumero;
-         } else if (operation == "-") {
+         } else if (operation == "resta") {
              return primerNumero - segundoNumero;
-         } else if (operation == "*") {
+         } else if (operation == "multiplicacion") {
              return primerNumero * segundoNumero;
-         } else if (operation == "/") {
+         } else if (operation == "division") {
              return primerNumero / segundoNumero;
          }
      }
@@ -27,22 +27,22 @@
  // Calculadora
 
  function sumar() {
-     let operation = "+";
+     let operation = "suma";
      calculate(operation);
  }
 
  function restar() {
-     let operation = "-";
+     let operation = "resta";
      calculate(operation);
  }
 
  function multiplicar() {
-     let operation = "*";
+     let operation = "multiplicacion";
      calculate(operation);
  }
 
  function dividir() {
-     let operation = "/";
+     let operation = "division";
      calculate(operation);
  }
 
@@ -50,7 +50,6 @@
      let number = getNumber(num1, num2); // recoge los valores introducidos
      return document.getElementById("resultado").innerText = result(number[0], number[1], operation);
  }
-
 
  // Escucha los botones de la calculadora
 
